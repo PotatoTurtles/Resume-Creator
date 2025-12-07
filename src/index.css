@@ -20,16 +20,20 @@
 
   scrollbar-width: none;
 }
+body{
+  background-image: url(./assets/360_F_340078556_YD52qpLaiTbO5E0OF90FuOaAq3sZr8yF.jpg);
+  background-size: center cover;
+}
 
 .container{
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-
-  background-color: white;
 
   display: flex;
   padding: 2vw;
   gap: 2vw;
+
+  transition: height 0.3s ease;
 }
 .navButton{
   padding: 2vh 5vw;
@@ -43,21 +47,25 @@
 .display{
   min-width: 65vw;
   height: 100%;
-  background-color: rgb(71, 68, 68);
+  background-color: rgba(71, 68, 68, 0.95);
   padding: 2vw;
   border-radius: 2vw;
+
+  overflow: hidden;
 }
 .sidebar{
   width: 100%;
   height: 100%;
 
-  background-color: rgb(71, 68, 68);
+  background-color: rgb(71, 68, 68,0.95);
   padding: 2vw;
   border-radius: 2vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  overflow: hidden;
 }
 
 form{
@@ -72,5 +80,9 @@ form{
   background-color: dimgray;
 }
 .hide{
-  display: none;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  opacity: none;
 }

@@ -1,19 +1,13 @@
 import { useState } from 'react'
 
-function Education({prop,setProp}){
-    const [school, setSchool] = useState('Town University');
-    const [major, setMajor] = useState('Computer Science');
-    const [complete, setComplete] = useState('00/00/0000');
-
-    console.log(prop);
-
+function Education({prop,setProp,resume,setResume}){
     return(<div className={'container ' + (prop['two']?'show':'hide')} >
         <div className='display'>
             <div>
                 <h2>Education</h2>
                 
                 <p>
-                    Graduated from {school} with a degree in {major} on {complete}.
+                    Graduated from {resume.education.school} with a degree in {resume.education.major} on {resume.education.complete}.
                 </p>
             </div>
         </div>
@@ -27,17 +21,17 @@ function Education({prop,setProp}){
                 <section>
                     <div>
                         <label htmlFor="school">School Name:</label>
-                        <input id='school' type="text" placeholder='Town University' onChange={(e)=>setSchool(e.target.value)} />
+                        <input id='school' type="text" placeholder='Town University' onChange={(e)=>setResume({...resume, education:{...resume.education,school:e.target.value}})} />
                     </div>
 
                     <div>
                         <label htmlFor="major">Degree:</label>
-                        <input id='major' type="text" placeholder='Computer Science' onChange={(e)=>setMajor(e.target.value)} />
+                        <input id='major' type="text" placeholder='Computer Science' onChange={(e)=>setResume({...resume, education:{...resume.education,major:e.target.value}})} />
                     </div>
 
                     <div>
                         <label htmlFor="complete">Degree Completion:</label>
-                        <input id='complete' type="date" onChange={(e)=>setComplete(e.target.value)} />
+                        <input id='complete' type="date" onChange={(e)=>setResume({...resume, education:{...resume.education,complete:e.target.value}})} />
                     </div>
                 </section>
             </form>
