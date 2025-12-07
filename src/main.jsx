@@ -1,14 +1,11 @@
-import { StrictMode } from 'react'
+import { StrictMode, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import GenInfo from './genInfo.jsx'
-import Education from './education.jsx'
-import Experience from './experience.jsx'
+import Combine from './combine.jsx'
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <GenInfo />
-    <Education />
-    <Experience />
+    <Combine />
   </StrictMode>,
 )

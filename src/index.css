@@ -71,3 +71,6 @@ form{
   align-items: center;
   background-color: dimgray;
 }
+.hide{
+  display: none;
+}
